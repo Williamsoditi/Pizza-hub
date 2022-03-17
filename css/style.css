@@ -1,3 +1,9 @@
+*{
+    text-align: center;
+}
+hr{
+    color: red;
+}
 .landing-text{
     text-align: center;
     padding: 8vw;
@@ -10,5 +16,5 @@
     opacity: 0.9;
 }
 .order-button{
-    margin-top: 2vw;
+    margin-top: 4vw;
 }
