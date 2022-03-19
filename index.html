@@ -50,7 +50,7 @@
         <div class="container-fluid img-fluid landing-page">
             <div class="container landing-text">
                 <h1 class="display-1 pt-5">It's not just all about pizza, it's an experience.</h1>
-                <button type="button" class="btn btn-success order-button">ORDER NOW</button>
+                <a href="#make-order"><button type="button" class="btn btn-success">Order Now !</button></a>
             </div>
         </div>
     </section>
@@ -141,13 +141,52 @@
     <!-- MAKE ORDER -->
     <section>
         <div class="container-fluid">
-            <div class="container" id="make-order"></div>
+            <div class="container" id="make-order">
+                <h2>Make an order</h2>
+                <hr>
+                <p>Please choose an order of your liking :</p>
+            </div>
+            <div class="container">
+                <form action="">
+                    <label for="pizzaSize" class="form-label">Choose your pizza size:</label>
+                    <select name="" id="pizzaSize" class="form-select">
+                        <option value="Small">Small</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Large">Large</option>
+                    </select>
+                    <label for="pizzaTopping" class="form-label">Which topping suits you ?</label><br>
+                    <select name="pizzaTopping" id="pizzaTopping">
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select><br>
+                    <label for="crustType" class="form-label">Select crust size :</label><br>
+                    <select name="" id="crustType" class="form-select">
+                        <option value="Thick-crust">Thick-crust</option>
+                        <option value="Thin-crust">Thin-crust</option>
+                        <option value="Stuffed">Stuffed</option>
+                        <option value="Crispy">Crispy</option>
+                        <option value="Gluten-free">Gluten-free</option>
+                    </select><br>
+                    <label for="pizzaQuantity" class="form-label">Quantity (One is never enough) :</label><br>
+                    <input type="number" name="quantity" id="PizzaQuantity" min="1" max="200" class="form-select">
+
+                    <div class="pt-3">
+                        <button type="button" class="btn btn-success">Make Order</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </section>
 
     <!-- CONTACT US -->
     <section>
-        <div class="container-fluid">
+        <div class="container-fluid pt-5">
             <div class="container" id="contact-us">
                 <h2>Contact us</h2>
                 <hr>
