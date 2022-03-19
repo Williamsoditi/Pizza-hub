@@ -287,12 +287,72 @@
                             <div class="col">
                                 <button type="button" class="btn btn-success" id="makeOrder">Make Order</button>
                             </div>
-                            <!-- <div class="col">
-                                <button type="button" class="btn btn-primary">Order Delivery</button>
-                            </div> -->
                         </div>
                     </div>
                 </form>
+            </div>
+            <div class="container myOrder" id="myOrder">
+                <h2>Pizza-hub Receipt</h2>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <h5>Your Pizza Size is:</h5>
+                    </div>
+                    <div class="col-sm-4">
+                        <p id="myPizzaSize"></p>
+                    </div>
+                    <div class="col-sm-4">
+                        <p id="pizzaSizePrice"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <h5>Topping chosen:</h5>
+                    </div>
+                    <div class="col-sm-4">
+                        <p id="myPizzaTopping"></p>
+                    </div>
+                    <div class="col-sm-4">
+                        <p id="pizzaToppingPrice"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <h5>Crust Chosen:</h5>
+                    </div>
+                    <div class="col-sm-4">
+                        <p id="myPizzaCrust"></p>
+                    </div>
+                    <div class="col-sm-4">
+                        <p id="pizzaCrustPrice"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h5>Pizza pieces:</h5>
+                    </div>
+                    <div class="col-sm-6">
+                        <p id="myPizzaQuantity"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h5>Total pizzas bought:</h5>
+                    </div>
+                    <div class="col-sm-6">
+                        <p id="total"></p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <button type="button" class="btn btn-success" id="backToOrderBtn">Back to order</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn btn-info" id="deliverMe" onclick="wantDelivery()">Delivery?</button>
+                    </div>
+                </div>
+            
+
             </div>
         </div>
     </section>

@@ -1,3 +1,8 @@
+function wantDelivery() {
+    var locality = prompt("Please enter target destination!");
+    alert("Dear customer, the delivery fee is present on the receipt");
+    alert("Our services will be at" + " " + locality + " " + "at any time from now!" );
+}
 $(document).ready(function () {
     $(".delivery").click(function () {
         $(".delivery-img").fadeToggle(1000);
@@ -102,6 +107,13 @@ submitButton.addEventListener("click", function () {
     pizza.crustType = document.getElementById("crustType").value;
     pizza.pizzaTopping = document.getElementById("pizzaTopping").value;
     pizza.pizzaQuantity = parseInt(document.getElementById("pizzaQuantity").value);
+
+    let total = pizza.totalPrice();
+    let check = checkIfEmpty(pizza);
+
+    if (check) {
+        document.getElementById("myPizzaSize").innerHTML = pizza.pizzaSize;
+    }
     
 })
     
