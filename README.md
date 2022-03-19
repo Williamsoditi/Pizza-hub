@@ -8,7 +8,7 @@ By Williams Oditi Olang
 + [Contact Information](#contact-information)
 + [Copyright and License](#copyright-and-license-information)
 ## Description
-This is a clone webpage to Delani studio with improved features like hover effect on the portfolio section and user interactivity.
+Welcome to Pizza-hub. This is a web application where customers order different sizes of pizzas with one or more toppings, with a delivery option for customers. Implemented using javascript and Jquery.
 ## Project resources
 The following is a live-link to the project's site
 
