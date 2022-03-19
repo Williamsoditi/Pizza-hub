@@ -35,6 +35,7 @@ dateTag.innerHTML = "Copyright(C)" + " " + date;
 //  CONSTRUCTOR  //
 class Pizza{
     constructor(pizzaSize, pizzaTopping, crustType, pizzaQuantity) {
+        // this.customerName = customerName;
         this.pizzaSize = pizzaSize;
         this.pizzaTopping = pizzaTopping;
         this.crustType = crustType;
@@ -110,15 +111,16 @@ let submitButton = document.getElementById("makeOrder");
 submitButton.addEventListener("click", function () {
 
     const pizza = new Pizza();
+    // pizza.name = document.getElementById("customerName").value;
     pizza.pizzaSize = document.getElementById("pizzaSize").value;
     pizza.crustType = document.getElementById("crustType").value;
     pizza.pizzaTopping = document.getElementById("pizzaTopping").value;
     pizza.pizzaQuantity = parseInt(document.getElementById("pizzaQuantity")).value;
 
     let total = pizza.totalPrice();
-    // let check = checkIfEmpty(pizza);
-
-    // if (check) {
+    let check = checkIfEmpty(pizza);
+    if (check) {
+        // document.getElementById("customerName").innerHTML = pizza.name;
         document.getElementById("myPizzaSize").innerHTML = pizza.pizzaSize;
         document.getElementById("pizzaSizePrice").innerHTML = pizza.sizePrices();
         document.getElementById("myPizzaTopping").innerHTML = pizza.pizzaTopping;
@@ -129,16 +131,16 @@ submitButton.addEventListener("click", function () {
         document.getElementById("total").innerHTML = total;
         $("#make-order").hide();
         $("#myOrder").show();
-    // }
+    } else
     document.getElementById("placeOrder").reset();
 })
     
 
-function orderValidation(object) {
+function checkIfEmpty(object) {
     if (isNaN(object.pizzaQuantity)) {
-        alert("Please select pieces of pizzas needed!");
-        return false;
-    } else {
+        alert("Please select number of pizzas needed!");
         return true;
+    } else {
+        return false;
     };
 };

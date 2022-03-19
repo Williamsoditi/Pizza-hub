@@ -253,7 +253,9 @@
                 <p>Please choose an order of your liking :</p>
             </div>
             <div class="container">
-                <form action="" name="orderValidation" id="placeOrder">
+                <form action="" id="placeOrder">
+                    <!-- <label for="name" class="from-label">Enter your name:</label>
+                    <input type="text" placeholder="Names..." class="form-control" name="customerName"> -->
                     <label for="pizzaSize" class="form-label">Choose your pizza size:</label>
                     <select name="" id="pizzaSize" class="form-select">
                         <option value="Small">Small</option>
@@ -280,7 +282,7 @@
                         <option value="Gluten-free">Gluten-free</option>
                     </select><br>
                     <label for="pizzaQuantity" class="form-label">Quantity (One is never enough) :</label><br>
-                    <input type="number" name="quantity" id="PizzaQuantity" min="1" max="200" class="form-select">
+                    <input type="number" name="quantity" id="PizzaQuantity" min="1" max="200" class="form-select" required>
 
                     <div class="pt-3">
                         <div class="row">
@@ -295,6 +297,15 @@
 
             <div class="container myOrder" id="myOrder">
                 <h2>Pizza-hub Receipt</h2>
+                <hr>
+                <!-- <div class="row">
+                    <div class="col">
+                        <h5>Customer Name:</h5>
+                    </div>
+                    <div class="col">
+                        <p id="customerName"></p>
+                    </div>
+                </div> -->
                 <div class="row">
                     <div class="col-sm-4">
                         <h5>Your Pizza Size is:</h5>
@@ -338,7 +349,7 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-6">
-                        <h5>Total pizzas bought:</h5>
+                        <h5>Total Amount:</h5>
                     </div>
                     <div class="col-sm-6">
                         <p id="total"></p>
