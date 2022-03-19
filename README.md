@@ -6,13 +6,14 @@ By Williams Oditi Olang
 + [Requirements](#requirements)
 + [Technologies used](#technologies-used)
 + [Contact Information](#contact-information)
-+ [Copyright and License](#copyright-and-license-information)
++ [Copyright and License](#copyright-and-license-information) 
++ [Known bugs](#known-bugs)
 ## Description
 Welcome to Pizza-hub. This is a web application where customers order different sizes of pizzas with one or more toppings, with a delivery option for customers. Implemented using javascript and Jquery.git 
 ## Project resources
 The following is a live-link to the project's site
 
-Link : ``
+Link : `https://williamsoditi.github.io/Pizza-hub/`
 ## Requirements
 + Either a smartphone, computer or tablet
 + An access to the internet
@@ -42,6 +43,9 @@ Feel free to fork the project and add neccessary changes.
 ## Contact information
 + Author E-mail ; `williamsoditi99@gmail.com `
 + Phone Number: +254 712345678
+
+## Known bugs
+There exists a bug on the receipt, an undefined value of the values present
 
 ## Copyright and license information
 Copyright (c) 2022 Williams Oditi
