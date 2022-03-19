@@ -16,3 +16,7 @@ $(document).ready(function () {
         $("#hotels").fadeToggle(1000);
     });
 })
+// ADDING CURRENT YEAR
+let date = new Date().getFullYear();
+let dateTag = document.getElementById("year");
+dateTag.innerHTML = "Copyright(C)" + " " + date;
