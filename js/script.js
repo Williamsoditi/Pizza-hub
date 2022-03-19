@@ -20,8 +20,13 @@ $(document).ready(function () {
         $(".trial").fadeToggle(1000);
         $("#hotels").fadeToggle(1000);
     });
+    $("#backToOrder").click(function () {
+        $("#make-order").show();
+        $("#myOrder").hide();
+    });
 })
-// ADDING CURRENT YEAR
+
+// ADDING CURRENT YEAR OF THE FOOTER //
 let date = new Date().getFullYear();
 let dateTag = document.getElementById("year");
 dateTag.innerHTML = "Copyright(C)" + " " + date;
@@ -47,54 +52,56 @@ class Pizza{
         }
         }
 
-        crustPrice() {
-            if (this.crustType === "Thick-crust") {
-                return 300;
-            };
-            if (this.crustType === "Thin-crust") {
-                return 250;
-            };
-            if (this.crustType === "Stuffed") {
-                return 200;
-            };
-            if (this.crustType === "Crispy") {
-                return 50;
-            };
-            if (this.crustType === "Gluten-free") {
-                return 100;
-            };
-        }
-
-        toppingsPrice() {
-            if (this.pizzaTopping === "Pineapple") {
-                return 100;
-            };
-            if (this.pizzaTopping === "BBQ") {
-                return 100;
-            };
-            if (this.pizzaTopping === "Extra-cheese") {
-                return 100;
-            };
-            if (this.pizzaTopping === "Chicken") {
-                return 100;
-            };
-            if (this.pizzaTopping === "Buffallo-sauce") {
-                return 100;
-            };
-            if (this.pizzaTopping === "Vegetable") {
-                return 100;
-            };
-            if (this.pizzaTopping === "Greens") {
-                return 100;
-            };
-            if (this.pizzaTopping === "Chocolate-shavings") {
-                return 100;
-            };
+    crustPrice() {
+        if (this.crustType === "Thick-crust") {
+            return 300;
         };
+        if (this.crustType === "Thin-crust") {
+            return 250;
+        };
+        if (this.crustType === "Stuffed") {
+            return 200;
+        };
+        if (this.crustType === "Crispy") {
+            return 50;
+        };
+        if (this.crustType === "Gluten-free") {
+            return 100;
+        };
+    }
+
+    toppingsPrice() {
+        if (this.pizzaTopping === "Pineapple") {
+            return 100;
+        };
+        if (this.pizzaTopping === "BBQ") {
+            return 300;
+        };
+        if (this.pizzaTopping === "Extra-cheese") {
+            return 150;
+        };
+        if (this.pizzaTopping === "Chicken") {
+            return 100;
+        };
+        if (this.pizzaTopping === "Buffallo-sauce") {
+            return 100;
+        };
+        if (this.pizzaTopping === "Vegetable") {
+            return 50;
+        };
+        if (this.pizzaTopping === "Greens") {
+            return 80;
+        };
+        if (this.pizzaTopping === "Chocolate-shavings") {
+            return 150;
+        };
+    };
 
         totalPrice() {
             return (
-                (this.sizePrices() + this.crustPrice() + this.toppingsPrice()) * this.pizzaQuantity
+                (this.sizePrices() + 
+                this.crustPrice() + 
+                this.toppingsPrice()) * this.pizzaQuantity
             );
         };
 };
@@ -106,23 +113,32 @@ submitButton.addEventListener("click", function () {
     pizza.pizzaSize = document.getElementById("pizzaSize").value;
     pizza.crustType = document.getElementById("crustType").value;
     pizza.pizzaTopping = document.getElementById("pizzaTopping").value;
-    pizza.pizzaQuantity = parseInt(document.getElementById("pizzaQuantity").value);
+    pizza.pizzaQuantity = parseInt(document.getElementById("pizzaQuantity")).value;
 
     let total = pizza.totalPrice();
-    let check = checkIfEmpty(pizza);
+    // let check = checkIfEmpty(pizza);
 
-    if (check) {
+    // if (check) {
         document.getElementById("myPizzaSize").innerHTML = pizza.pizzaSize;
-    }
-    
+        document.getElementById("pizzaSizePrice").innerHTML = pizza.sizePrices();
+        document.getElementById("myPizzaTopping").innerHTML = pizza.pizzaTopping;
+        document.getElementById("pizzaToppingPrice").innerHTML = pizza.toppingsPrice();
+        document.getElementById("myPizzaCrust").innerHTML = pizza.crustType;
+        document.getElementById("pizzaCrustPrice").innerHTML = pizza.crustPrice;
+        document.getElementById("myPizzaQuantity").innerHTML = pizza.pizzaQuantity;
+        document.getElementById("total").innerHTML = total;
+        $("#make-order").hide();
+        $("#myOrder").show();
+    // }
+    document.getElementById("placeOrder").reset();
 })
     
 
-// function orderValidation(object) {
-//     if (isNaN(object.pizzaQuantity)) {
-//         alert("Please select pieces of pizzas needed!");
-//         return false;
-//     } else {
-//         return true;
-//     }
-// }
+function orderValidation(object) {
+    if (isNaN(object.pizzaQuantity)) {
+        alert("Please select pieces of pizzas needed!");
+        return false;
+    } else {
+        return true;
+    };
+};

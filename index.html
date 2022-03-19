@@ -253,7 +253,7 @@
                 <p>Please choose an order of your liking :</p>
             </div>
             <div class="container">
-                <form action="" name="orderValidation">
+                <form action="" name="orderValidation" id="placeOrder">
                     <label for="pizzaSize" class="form-label">Choose your pizza size:</label>
                     <select name="" id="pizzaSize" class="form-select">
                         <option value="Small">Small</option>
@@ -261,7 +261,7 @@
                         <option value="Large">Large</option>
                     </select>
                     <label for="pizzaTopping" class="form-label">Which topping suits you ?</label><br>
-                    <select name="pizzaTopping" id="pizzaTopping" class="form-select">
+                    <select id="pizzaTopping" class="form-select pizzaTopping">
                         <option value="Pineapple">Pineapple</option>
                         <option value="BBQ">BBQ</option>
                         <option value="Extra-Cheese">Extra-Cheese</option>
@@ -291,6 +291,8 @@
                     </div>
                 </form>
             </div>
+
+
             <div class="container myOrder" id="myOrder">
                 <h2>Pizza-hub Receipt</h2>
                 <div class="row">
@@ -345,7 +347,7 @@
 
                 <div class="row">
                     <div class="col">
-                        <button type="button" class="btn btn-success" id="backToOrderBtn">Back to order</button>
+                        <button type="button" class="btn btn-success" id="backToOrder">Back to order</button>
                     </div>
                     <div class="col">
                         <button type="button" class="btn btn-info" id="deliverMe" onclick="wantDelivery()">Delivery?</button>
