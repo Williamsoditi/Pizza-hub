@@ -35,6 +35,13 @@ hr{
         transform: translateY(-10px);
     }
 }
+.land-button{
+    margin-top: 60px;
+}
+
+.services-img:hover{
+    cursor: pointer;
+}
 /* .my-image{
     transition: all 2s ease-in-out;
 }
