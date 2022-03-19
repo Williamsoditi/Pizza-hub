@@ -18,3 +18,13 @@ hr{
 .order-button{
     margin-top: 4vw;
 }
+#delivery, #payment, #offers, #hotels{
+    display: none;
+}
+/* .my-image{
+    transition: all 2s ease-in-out;
+}
+.my-image:hover{
+    transform: scale(2, 2);
+    cursor: progress;
+} */
