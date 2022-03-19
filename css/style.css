@@ -29,10 +29,10 @@ hr{
         transform: translateY(0);
     }
     40% {
-        transform: translateY(-10px);
+        transform: translateY(-25px);
     }
     60% {
-        transform: translateY(-10px);
+        transform: translateY(-25px);
     }
 }
 .land-button{

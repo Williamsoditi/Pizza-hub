@@ -93,6 +93,17 @@ class Pizza{
             );
         };
 };
+
+let submitButton = document.getElementById("makeOrder");
+submitButton.addEventListener("click", function () {
+
+    const pizza = new Pizza();
+    pizza.pizzaSize = document.getElementById("pizzaSize").value;
+    pizza.crustType = document.getElementById("crustType").value;
+    pizza.pizzaTopping = document.getElementById("pizzaTopping").value;
+    pizza.pizzaQuantity = parseInt(document.getElementById("pizzaQuantity").value);
+    
+})
     
 
 // function orderValidation(object) {
