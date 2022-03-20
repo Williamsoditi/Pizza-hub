@@ -1,5 +1,6 @@
 # PIZZA-HUB
 By Williams Oditi Olang
+![Project-design](./assets/overall.jpg)
 ## Table of contents
 + [Description](#Description)
 + [Project resources](#project-resources)
@@ -39,13 +40,13 @@ Feel free to fork the project and add neccessary changes.
 + CSS3 - This was used to style the webpage
 + Bootstrap 5 -Webpage styling.
 + Javascript -  This was used to make the webpage interactive.
-+ jQuery - This was used to make the webpage dynamic
++ jQuery - This was used to make the webpage dynamic.
 ## Contact information
 + Author E-mail ; `williamsoditi99@gmail.com `
 + Phone Number: +254 712345678
 
 ## Known bugs
-There exists a bug on the receipt, an undefined value of the values present
+There exists a bug on the receipt, an undefined value of the values present.
 
 ## Copyright and license information
 Copyright (c) 2022 Williams Oditi
