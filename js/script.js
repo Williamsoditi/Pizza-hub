@@ -115,32 +115,36 @@ submitButton.addEventListener("click", function () {
     pizza.pizzaSize = document.getElementById("pizzaSize").value;
     pizza.crustType = document.getElementById("crustType").value;
     pizza.pizzaTopping = document.getElementById("pizzaTopping").value;
-    pizza.pizzaQuantity = parseInt(document.getElementById("pizzaQuantity")).value;
+    pizza.pizzaQuantity = parseInt(document.getElementById("pizzaQuantity").value);
+    console.log(typeof(pizza.pizzaQuantity));
 
     let total = pizza.totalPrice();
     let check = checkIfEmpty(pizza);
     if (check) {
         // document.getElementById("customerName").innerHTML = pizza.name;
-        document.getElementById("myPizzaSize").innerHTML = pizza.pizzaSize;
-        document.getElementById("pizzaSizePrice").innerHTML = pizza.sizePrices();
-        document.getElementById("myPizzaTopping").innerHTML = pizza.pizzaTopping;
-        document.getElementById("pizzaToppingPrice").innerHTML = pizza.toppingsPrice();
-        document.getElementById("myPizzaCrust").innerHTML = pizza.crustType;
-        document.getElementById("pizzaCrustPrice").innerHTML = pizza.crustPrice;
-        document.getElementById("myPizzaQuantity").innerHTML = pizza.pizzaQuantity;
-        document.getElementById("total").innerHTML = total;
+        document.getElementById("myPizzaSize").innerText = pizza.pizzaSize;
+        document.getElementById("pizzaSizePrice").innerText = pizza.sizePrices() + " " + "kshs";
+        document.getElementById("myPizzaTopping").innerText = pizza.pizzaTopping;
+        document.getElementById("pizzaToppingPrice").innerText = pizza.toppingsPrice() + " " + "kshs";
+        document.getElementById("myPizzaCrust").innerText = pizza.crustType;
+        document.getElementById("pizzaCrustPrice").innerText = pizza.crustPrice() + " " + "kshs";
+        document.getElementById("myPizzaQuantity").innerHTML = pizza.pizzaQuantity + " " + "pcs";
+        document.getElementById("total").innerHTML = "Your total price is"+ " " + total + " " + "kshs only.";
+        
+    
         $("#make-order").hide();
         $("#myOrder").show();
     } else
     document.getElementById("placeOrder").reset();
-})
+});
+
     
 
 function checkIfEmpty(object) {
     if (isNaN(object.pizzaQuantity)) {
         alert("Please select number of pizzas needed!");
-        return true;
-    } else {
         return false;
+    } else {
+        return true;
     };
 };
