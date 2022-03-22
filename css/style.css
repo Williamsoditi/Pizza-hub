@@ -1,6 +1,12 @@
 *{
     text-align: center;
 }
+p, label, input, a{
+    font-family: 'Roboto', sans-serif;
+}
+h2, h1{
+    font-family: 'Poppins', sans-serif;
+}
 hr{
     color: red;
 }
