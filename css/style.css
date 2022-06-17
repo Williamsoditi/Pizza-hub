@@ -1,6 +1,9 @@
 *{
     text-align: center;
 }
+::-webkit-scrollbar{
+    display: none;
+}
 p, label, input, a{
     font-family: 'Roboto', sans-serif;
 }
